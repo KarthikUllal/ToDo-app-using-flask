@@ -25,7 +25,7 @@
     </header>
 
     <main class="container">
-        {% with messages = get_flashed_message(with_category = True) %}
+        {% with messages = get_flashed_messages(with_categories = True) %}
             {% for category, message in messages %}
                 <div class="flash {{category}}">{{message}}</div>
             {% endfor %}
@@ -36,10 +36,11 @@
 
         {% endblock %}
     </main>
-
+<footer>
     <div class="container">
         <p>&copy; {{2025}} My Flask To-Do App</p>
         
     </div>
+</footer>
 </body>
 </html>
